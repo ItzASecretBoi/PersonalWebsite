@@ -117,6 +117,10 @@ export function getDefaultHue(): number {
 }
 
 export function getHue(): number {
+	// A fixed theme colour ignores any hue saved by the picker.
+	if (document.getElementById("config-carrier")?.dataset.hueFixed) {
+		return getDefaultHue();
+	}
 	const stored = localStorage.getItem("hue");
 	return stored ? Number.parseInt(stored, 10) : getDefaultHue();
 }
