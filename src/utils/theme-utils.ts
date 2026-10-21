@@ -5,7 +5,7 @@ import {
 	type McStyle,
 	resolveScheme,
 } from "@utils/mc-utils";
-import { getDefaultSpec, getDefaultStyle } from "@/config";
+import { getDefaultSpec, getDefaultStyle, siteConfig } from "@/config";
 
 const STYLE_KEY = "mc-style";
 const SPEC_KEY = "mc-spec";
@@ -74,11 +74,15 @@ export function isMcSpec(v: string): v is McSpec {
 }
 
 export function getStyle(): McStyle {
+	// A fixed theme colour ignores any style saved by the display settings.
+	if (siteConfig.themeColor.fixed) return getDefaultStyle() as McStyle;
 	const stored = localStorage.getItem(STYLE_KEY);
 	return stored && isMcStyle(stored) ? stored : (getDefaultStyle() as McStyle);
 }
 
 export function getSpec(): McSpec {
+	// A fixed theme colour ignores any spec saved by the display settings.
+	if (siteConfig.themeColor.fixed) return getDefaultSpec() as McSpec;
 	const stored = localStorage.getItem(SPEC_KEY);
 	return stored && isMcSpec(stored) ? stored : (getDefaultSpec() as McSpec);
 }
