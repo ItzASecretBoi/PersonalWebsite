@@ -1,26 +1,43 @@
-# About Shirone
+# About ItzASecretBoi
 
-Welcome to the demo site of **Shirone** (白音) — an expressive, anime-inspired blog theme built on the **Material 3 Expressive (M3E)** design system.
+Welcome to my personal website, for all things relating to me, me, & me!
 
-::github{repo="LyraVoid/Shirone"}
+![alt text](<silly image.png>)
 
-## ✦ Design & Philosophy
+## ✦ Who are you?
 
-Shirone aims to combine the warmth of expressive anime aesthetics with the rigor of modern web engineering:
+My first name is Lyndayle, or nicknamed, I'm "Tank", I'm a game developer who uses FL Studio as a hobbyist.
 
-- **Dynamic Chromatic Spell**: Full dynamic HCT palette generation responding seamlessly to light/dark modes and user preferences with zero layout shifts.
-- **Seamless Shell Navigation**: Persistent application shell driven by Swup for continuous music playback, smooth page transitions, and preserved state.
-- **Rich Story Grimoire**: Markdown and MDX authoring with KaTeX math, Mermaid diagrams, interactive admonitions, expressive code blocks, and adaptive image galleries.
-- **Zero Extra Burden**: Optional integrations (comments, analytics, music widgets) load dynamically on demand — zero DOM footprint and zero bundle overhead when disabled.
+:::details[Keep It A Secret?]
+( - HA HA, yeah I know, I'm not "keeping it a secret" by exposing my name, SHH! I'm only telling you because your cool and on my website. 🤫)
+:::
 
-## ✦ Tech Stack
+But for people I don't know well or don't know on a professional basis, I instead often like to go by my online alias, "Secret".
 
-- **Framework**: [Astro 7](https://astro.build/) & [Svelte 5](https://svelte.dev/) (Runes-driven islands)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) & [Stylus](https://stylus-lang.com/)
-- **Design Standard**: [Material 3 Expressive](https://m3.material.io/)
-- **Typography**: Outfit & Yozai (悠哉圆体) with automated build-time subsetting
-- **Search Engine**: [Pagefind](https://pagefind.app/) offline full-text search
+My primary schtick is game development! As of writing this I'm actually in my second year, pursuing degree for Game Programming in college! It's been going pretty good, I even got lead programmer for minor production, and a teaching gig at the school over the summer!
 
-## ✦ Credits
+But, thats's not the only thing that I do! In my free time, I like to make silly tunes in FL studio, and while I've been on quite the hiatus as of writing this, I also like to stream and make content occasionally when I have the time.
+
+## ✦ What can I expect to see on this site?
+
+I'd like to blog here about my various projects, silly one-off things I'm working on, or just life stuff in general, I also plan on dropping a bunch of unfinished music on this site hopefully.
+
+Any news about games, or projects I've been working on will probably end up showing up here first!
+
+Oh, and I can't forget! Fanart, I'd love to have a bunch of fanart on this website, so be sure to send it in my discord linked below if you have any! 👀
+
+---
+
+## ✦ Join the discord!
+<iframe src="https://discord.com/widget?id=816013546356736011&theme=dark" width="800" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+---
+
+## ✦ Site Credits
 
 - **Font**: [Yozai Font (悠哉字体)](https://github.com/lxgw/yozai-font) by [lxgw](https://github.com/lxgw)
+
+- **Shirone**: This website is cloned & built upon the **"Shirone"** repo, so credits to all those who contributed on that!
+::github{repo="LyraVoid/Shirone"}
+
+---

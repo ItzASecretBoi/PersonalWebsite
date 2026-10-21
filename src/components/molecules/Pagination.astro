@@ -14,12 +14,14 @@ interface Props {
 	page: Page;
 	class?: string;
 	style?: string;
+	/** Path of the paginated listing's first page, e.g. "/blog/" (defaults to "/"). */
+	basePath?: string;
 }
 
-const { page, style } = Astro.props;
+const { page, style, basePath = "/" } = Astro.props;
 const className = Astro.props.class;
 
-const getPageUrl = (p: number) => (p === 1 ? "/" : `/${p}/`);
+const getPageUrl = (p: number) => (p === 1 ? basePath : `${basePath}${p}/`);
 const buildUrl = (p: number) => url(getPageUrl(p));
 
 const labels = {
