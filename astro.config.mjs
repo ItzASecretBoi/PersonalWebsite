@@ -8,6 +8,4 @@ import shirones from "./src/integration/index.ts";
 // stay in lockstep (see `src/config/README.md`).
 export default defineConfig({
 	integrations: [shirones()],
-	site: 'https://ItzASecretBoi.secretstudioz.com',
-	base: '/PersonalWebsite'
 });

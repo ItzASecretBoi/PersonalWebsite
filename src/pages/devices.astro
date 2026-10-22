@@ -4,13 +4,14 @@ import DeviceSection from "@components/organisms/DeviceSection.svelte";
 import I18nKey from "@i18n/i18nKey";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { resolveI18nText } from "@utils/i18n-utils";
+import { url } from "@utils/url-utils";
 import { devicesConfig } from "@/config/devicesConfig";
 import { duffelBagConfig } from "@/config/duffelBagConfig";
 import { resolveDevicesData } from "@/utils/feature-data";
 
 // Merged into the Duffel Bag page while it is enabled.
 if (duffelBagConfig.enable) {
-	return Astro.redirect("/duffel-bag/");
+	return Astro.redirect(url("/duffel-bag/"));
 }
 
 if (!devicesConfig.enable) {

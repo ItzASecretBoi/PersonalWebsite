@@ -90,6 +90,11 @@ const textureOptions = resolveTextureOptions();
 const defaultTexturePreset = textureOptions.defaultPreset;
 const defaultTextureOpacity = textureOptions.defaultOpacity;
 const textureEnabled = textureOptions.enable;
+// textures.css is inlined as raw text, so root-relative url("/…") assets need the site base added here.
+const textureCss = textureStyles.replace(
+	/url\("(\/[^/"][^"]*)"\)/g,
+	(_, path: string) => `url("${url(path)}")`,
+);
 const umamiOptions = resolveUmamiOptions(umamiConfig);
 
 const hasDesktopBanner = hasBannerImages(siteConfig.banner.src.desktop);
@@ -144,7 +149,7 @@ const configuredFontRoles = getConfiguredFontRoles(resolvedFontOptions);
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		{fontRoleStyle && <style is:inline set:html={fontRoleStyle}></style>}
-		{textureEnabled && <style is:inline set:html={textureStyles}></style>}
+		{textureEnabled && <style is:inline set:html={textureCss}></style>}
 		{configuredFontRoles.map((role) => (
 			<Font
 				cssVariable={resolvedFontOptions.roles[role].cssVariable as never}

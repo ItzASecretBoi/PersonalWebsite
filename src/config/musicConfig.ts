@@ -84,14 +84,20 @@ export interface ResolvedMusicOptions {
 const ABSOLUTE_MEDIA_SOURCE = /^(?:https?:)?\/\//i;
 const UNSAFE_SCHEME = /^[a-z][a-z\d+.-]*:/i;
 
+/** Prefixes a site-root path with the deployment base (e.g. "/PersonalWebsite/"). */
+function withBase(path: string): string {
+	const base = (import.meta.env?.BASE_URL ?? "/").replace(/\/+$/, "");
+	if (!base || path === base || path.startsWith(`${base}/`)) return path;
+	return `${base}${path}`;
+}
+
 function normalizeMediaSource(value: string): string | null {
 	const source = value.trim();
 	if (!source) return null;
-	if (ABSOLUTE_MEDIA_SOURCE.test(source) || source.startsWith("/")) {
-		return source;
-	}
+	if (ABSOLUTE_MEDIA_SOURCE.test(source)) return source;
+	if (source.startsWith("/")) return withBase(source);
 	if (UNSAFE_SCHEME.test(source)) return null;
-	return `/${source.replace(/^\.\//, "")}`;
+	return withBase(`/${source.replace(/^\.\//, "")}`);
 }
 
 function normalizeTrack(
