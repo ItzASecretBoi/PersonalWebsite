@@ -15,6 +15,8 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	base: "/",
 	title: "ItzASecretBoi",
 	subtitle: "A Material 3 anime blog",
+	// Link-preview image (og:image); "/..." = file in public/. 1200x630 works best.
+	ogImage: "/og.png",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
 	topAppBar: {
 		contentAlign: "center",
@@ -72,7 +74,6 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
 			enable: true,
 			title: "ItzASecretBoi",
-			ogImage: "/og.png",
 			subtitle: [
 				"game developer.",
 				"programmer.",
