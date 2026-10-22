@@ -80,6 +80,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 				"youtuber.",
 				"jack of all trades.",
 			],
+			ogImage: "/og.png"
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。
 				enable: true,
