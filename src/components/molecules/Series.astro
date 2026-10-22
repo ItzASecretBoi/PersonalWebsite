@@ -58,6 +58,8 @@ const seriesItems: SeriesItem[] = !catalog
 					latest,
 				};
 			})
+			// Series whose posts are all drafts (or that have none yet) are not listed.
+			.filter((item) => item.count > 0)
 			.sort((a, b) => (b.latest?.getTime() ?? 0) - (a.latest?.getTime() ?? 0));
 
 const visibleItems = seriesItems.slice(0, DISPLAY_LIMIT).map((item) => ({

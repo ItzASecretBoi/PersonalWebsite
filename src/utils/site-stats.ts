@@ -5,6 +5,7 @@
  */
 import { render } from "astro:content";
 import { seriesConfig } from "../config/seriesConfig.ts";
+import { normaliseSeriesSlug } from "./series-utils.ts";
 import {
 	getCategoryList,
 	getSeriesCatalog,
@@ -64,8 +65,14 @@ export async function getSiteStats(): Promise<SiteStats> {
 		moments: moments.length,
 		categories: categories.length,
 		tags: tags.length,
-		/** 系列实体数（功能关闭时为 0，SiteStats 不产出该行） */
-		series: seriesCatalog?.size ?? 0,
+		/** Series that have at least one published post (0 when the feature is off). */
+		series: seriesCatalog
+			? new Set(
+					posts
+						.map((post) => normaliseSeriesSlug(post.data.series))
+						.filter((slug) => slug && seriesCatalog.has(slug)),
+				).size
+			: 0,
 		words,
 		days: Number.isFinite(earliest)
 			? Math.max(0, Math.floor((Date.now() - earliest) / DAY_MS))
