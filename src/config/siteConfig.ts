@@ -10,8 +10,8 @@ import { withUserConfig } from "../utils/config-overlay.ts";
  * 类型见 src/types/config.ts。
  */
 export const siteConfig: SiteConfig = withUserConfig("site", {
-	site: "https://itzasecretboi.github.io/",
-	// GitHub Pages project site lives under /PersonalWebsite/; set back to "/" on a custom domain.
+	// Canonical address (the apex domain redirects to www). Used for share embeds, RSS and the sitemap.
+	site: "https://www.itzasecretboi.me/",
 	base: "/",
 	title: "ItzASecretBoi",
 	subtitle: "A Material 3 anime blog",
