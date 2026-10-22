@@ -13,7 +13,7 @@ export const devicesData: DeviceItem[] = [
 		status: "active",
 		specs: "Ryzen 9 7950X 16-Core CPU / RTX 4070 / 32GB DDR5 / 3.8TB storage",
 		description:
-			"Primary workstation for development, design, and heavy rendering workloads.",
+			"Primary workstation for gaming, development, planning & FL studio composition.",
 		icon: "material-symbols:laptop-mac-rounded",
 		featured: true,
 		year: "",
