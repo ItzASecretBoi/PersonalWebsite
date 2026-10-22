@@ -70,7 +70,7 @@ export const timelineData: TimelineItem[] = [
 		description:
 			"I was picked out from my peers as a good fit to teach a summer program for possible students looking to visit AIE for programming!",
 		highlights: [
-			"Tutored Unreal Engine basics.",
+			"Tutored Unreal Engine UI & layout.",
 			"Went over basics such as int's, bool's, enums, etc.",
 			"Taught students how to make basic zombies mini game.",
 			"Kept students paying attention & engaged.",
@@ -89,7 +89,7 @@ export const timelineData: TimelineItem[] = [
 		description:
 			"I got accepted & started academically pursuing a degree for game programming at AIE!",
 		highlights: [
-			"Made bare c++ console games.",
+			"Made bare c++ terminal games.",
 			"Studied Unreal Engine 5 c++ & blueprint.",
 			"Was assigned lead programmer role in our minor production assessment!",
 			"Made 3D c++ graphic renderers.",

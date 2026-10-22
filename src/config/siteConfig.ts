@@ -30,7 +30,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	},
 	lang: "en", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	// IANA time zone for precise post and moment timestamps. It is independent of lang.
-	timeZone: "Asia/Shanghai",
+	timeZone: "America/Chicago",
 	themeColor: {
 		hue: 262, // Default hue 0-360. 站点设计默认粉紫（偏二次元）；262 紫 / 345 粉 也可选
 		fixed: true, // Hide the theme color picker for visitors
@@ -48,7 +48,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	// 页面背景纹理系统配置（5 大精美预设 + 零开销 HCT 动态取色）
 	texture: {
 		enable: true, // 是否启用背景纹理系统
-		defaultPreset: "sakura", // 默认纹理预设："none" | "starlight" | "cyber-dots" | "topography" | "geometric" | "sakura"
+		defaultPreset: "sakura", // i tweaked this to be custom lol // 默认纹理预设："none" | "starlight" | "cyber-dots" | "topography" | "geometric" | "sakura"
 		defaultOpacity: 0.12, // 默认纹理浓度 (0.05 ~ 0.25)
 		allowMotion: true, // 是否允许背景微动效（开启 reduced-motion 时自动静止）
 	},
