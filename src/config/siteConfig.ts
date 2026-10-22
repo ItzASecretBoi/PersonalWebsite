@@ -12,7 +12,7 @@ import { withUserConfig } from "../utils/config-overlay.ts";
 export const siteConfig: SiteConfig = withUserConfig("site", {
 	site: "https://itzasecretboi.github.io/",
 	// GitHub Pages project site lives under /PersonalWebsite/; set back to "/" on a custom domain.
-	base: "/PersonalWebsite/",
+	base: "/",
 	title: "ItzASecretBoi",
 	subtitle: "A Material 3 anime blog",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
