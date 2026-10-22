@@ -50,7 +50,8 @@ import { withUserConfig } from "../utils/config-overlay.ts";
  */
 export const musicConfig: MusicConfig = withUserConfig("music", {
 	enable: true,
-	provider: "mixed",
+	// "local" plays only src/data/music.ts; "mixed" would also pull the demo NetEase playlist below.
+	provider: "local",
 	// tracks: [
 	// 	{
 	// 		id: "custom-1",
