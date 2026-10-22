@@ -21,5 +21,12 @@ export const musicTracks: readonly TrackDescriptor[] = [
 		source: "/assets/music/url/HappyDayz__61dcaf5b.ogg",
 		duration: 99,
 	},
-
+	{
+		id: "funkmaxxing",
+		title: "Funkmaxxing",
+		artist: "ItzASecretBoi",
+		cover: "assets/images/music/secret.webp",
+		source: "/assets/music/url/funkmaxxing__8d904718.ogg",
+		duration: 64,
+	},
 ];
