@@ -15,17 +15,17 @@ export const profileConfig: ProfileConfig = withUserConfig("profile", {
 			icon: "fa7-brands:x-twitter", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://x.com",
+			url: "https://x.com/ItzASecretBoi",
 		},
 		{
-			name: "Steam",
-			icon: "fa7-brands:steam",
-			url: "https://store.steampowered.com",
+			name: "Bluesky",
+			icon: "fa7-brands:bluesky",
+			url: "https://bsky.app/profile/itzasecretboi.secretstudioz.com",
 		},
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
-			url: "https://github.com/LyraVoid/Shirone",
+			url: "https://github.com/ItzASecretBoi",
 		},
 	],
 });
