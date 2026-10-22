@@ -37,6 +37,7 @@ export type SidebarPage =
 	| "skills" // 技能
 	| "projects" // 项目
 	| "devices" // 设备展示
+	| "duffelBag" // Duffel Bag (devices + compass on one page)
 	| "games" // 游戏展示
 	| "timeline" // 时间线
 	| "albums" // 相册

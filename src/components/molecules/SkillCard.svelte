@@ -41,18 +41,19 @@ const fallback = $derived((skill.name.charAt(0) || "?").toUpperCase());
 	{/if}
 
 	<div
-		class="skill-card__meter"
-		role="meter"
-		aria-label={`${i18n(I18nKey.skillLevel)}: ${levelLabel}`}
-		aria-valuemin="1"
-		aria-valuemax="4"
-		aria-valuenow={meta.value}
-		aria-valuetext={levelLabel}
+//		class="skill-card__meter"
+//		role="meter"
+//		aria-label={`${i18n(I18nKey.skillLevel)}: ${levelLabel}`}
+//		aria-valuemin="1"
+//		aria-valuemax="4"
+//		aria-valuenow={meta.value}
+//		aria-valuetext={levelLabel}
 	>
 		{#each [1, 2, 3, 4] as segment}
 			<span class:skill-card__segment--active={segment <= meta.value}></span>
 		{/each}
 	</div>
+
 </article>
 
 <style lang="stylus">

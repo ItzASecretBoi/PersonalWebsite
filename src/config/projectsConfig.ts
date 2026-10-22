@@ -17,6 +17,11 @@ export const projectsConfig: ProjectsConfig = withUserConfig("projects", {
 	description: "$t:projectsBanner",
 	categories: [
 		{
+			key: "gamedev",
+			label: "Game Dev",
+			icon: "material-symbols:sports-esports-outline-rounded",
+		},
+		{
 			key: "theme",
 			label: "Theme",
 			icon: "material-symbols:palette-outline-rounded",

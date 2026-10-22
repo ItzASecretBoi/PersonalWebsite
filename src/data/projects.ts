@@ -6,40 +6,20 @@ import type { ProjectItem } from "@/types/projectsConfig";
 
 export const projectsData: ProjectItem[] = [
 	{
-		key: "shirone",
-		title: "Shirone",
+		key: "fragment",
+		title: "Fragment",
 		summary:
-			"An Astro blog theme shaped around an M3E component system, expressive content, and resilient client navigation.",
-		category: "theme",
+			"A modular, resource-based inventory system for Godot 4: build items from reusable fragments, with hotbars, equipment management and extendable UI.",
+		category: "gamedev",
 		phase: "building",
-		technologies: ["Astro", "Svelte", "TypeScript", "Tailwind CSS"],
-		icon: "material-symbols:deployed-code-outline-rounded",
-		cover: "/assets/projects/shirone.webp",
-		coverAlt: "Shirone theme homepage preview",
+		technologies: ["Godot 4", "GDScript"],
+		icon: "simple-icons:godotengine",
+		cover: "/assets/projects/fragment.png",
+		coverAlt: "Fragment, a Godot inventory system",
 		featured: true,
-		repository: "https://github.com/LyraVoid/Shirone",
+		website:
+			"https://itzasecretboi.itch.io/fragment?secret=Xk7UukdZUY3d61gzv7qiWt7H1Lk",
 		year: "2026",
-	},
-	{
-		key: "folkpatch",
-		title: "FolkPatch",
-		summary: "A kernel-level root solution for Android, built on APatch.",
-		category: "android",
-		phase: "building",
-		technologies: ["Kotlin", "APatch", "Android"],
-		icon: "material-symbols:terminal-rounded",
-		repository: "https://github.com/LyraVoid/FolkPatch",
-	},
-	{
-		key: "kernelpatch",
-		title: "KernelPatch",
-		summary:
-			"A kernel patch framework that powers APatch-style root on Android by loading code into the running kernel.",
-		category: "android",
-		phase: "shipped",
-		technologies: ["C", "Linux Kernel", "Android"],
-		icon: "material-symbols:extension-outline-rounded",
-		repository: "https://github.com/lyravoid/KernelPatch",
 	},
 ];
 

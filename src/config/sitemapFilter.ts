@@ -3,6 +3,7 @@ import { albumsConfig } from "./albumsConfig.ts";
 import { animeConfig } from "./animeConfig.ts";
 import { compassConfig } from "./compassConfig.ts";
 import { devicesConfig } from "./devicesConfig.ts";
+import { duffelBagConfig } from "./duffelBagConfig.ts";
 import { friendsConfig } from "./friendsConfig.ts";
 import { gamesConfig } from "./gamesConfig.ts";
 import { momentsConfig } from "./momentsConfig.ts";
@@ -26,6 +27,9 @@ export function getDisabledPages(): string[] {
 	if (albumsConfig.enable === false) disabled.push("albums");
 	if (compassConfig.enable === false) disabled.push("compass");
 	if (seriesConfig.enable === false) disabled.push("series");
+	// Duffel Bag replaces /devices/ and /compass/ (they redirect to it).
+	if (duffelBagConfig.enable === false) disabled.push("duffel-bag");
+	else disabled.push("devices", "compass");
 	return disabled;
 }
 

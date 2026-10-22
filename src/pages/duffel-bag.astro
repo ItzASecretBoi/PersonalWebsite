@@ -1,0 +1,69 @@
+---
+/** Duffel Bag page: devices + compass sections stacked on one page; the old routes redirect here. */
+import Card from "@components/atoms/display/Card.svelte";
+import PageHeader from "@components/molecules/PageHeader.svelte";
+import CompassSection from "@components/organisms/CompassSection.svelte";
+import DeviceSection from "@components/organisms/DeviceSection.svelte";
+import I18nKey from "@i18n/i18nKey";
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { resolveI18nText } from "@utils/i18n-utils";
+import { compassConfig } from "@/config/compassConfig";
+import { devicesConfig } from "@/config/devicesConfig";
+import { duffelBagConfig } from "@/config/duffelBagConfig";
+import { resolveDevicesData } from "@/utils/feature-data";
+import { compassData } from "../data/compass";
+
+if (!duffelBagConfig.enable) {
+	return Astro.redirect("/404/");
+}
+
+const pageTitle = resolveI18nText(duffelBagConfig.title, I18nKey.devices);
+const pageDescription = resolveI18nText(
+	duffelBagConfig.description,
+	I18nKey.devicesBanner,
+);
+
+const devicesTitle = resolveI18nText(devicesConfig.title, I18nKey.devices);
+const devicesDescription = resolveI18nText(
+	devicesConfig.description,
+	I18nKey.devicesBanner,
+);
+const compassTitle = resolveI18nText(compassConfig.title, I18nKey.compass);
+const compassDescription = resolveI18nText(
+	compassConfig.description,
+	I18nKey.compassBanner,
+);
+
+const items = resolveDevicesData(devicesConfig);
+---
+
+<MainGridLayout
+	title={pageTitle}
+	description={pageDescription}
+	page="duffelBag"
+>
+	<div class="flex flex-col gap-4">
+		<Card color="var(--card-bg)" radius="l" class="px-8 pt-6 pb-1">
+			<PageHeader
+				icon="material-symbols:checked-bag-outline-rounded"
+				title={pageTitle}
+				subtitle={pageDescription}
+			/>
+		</Card>
+		<DeviceSection
+			categories={devicesConfig.categories}
+			items={items}
+			title={devicesTitle}
+			subtitle={devicesDescription}
+			headingLevel={2}
+			client:visible
+		/>
+		<CompassSection
+			shelves={compassData}
+			title={compassTitle}
+			subtitle={compassDescription}
+			headingLevel={2}
+			client:visible
+		/>
+	</div>
+</MainGridLayout>

@@ -14,12 +14,15 @@ let {
 	title = "",
 	subtitle = "",
 	icon = "",
+	level = 1,
 	class: className = "",
 }: {
 	title: string;
 	subtitle?: string;
 	/** 标题左侧装饰图标（Iconify 名） */
 	icon?: string;
+	/** 标题层级：独立页面为 1；多个区块合并到同一页面时用 2 */
+	level?: 1 | 2;
 	class?: string;
 } = $props();
 </script>
@@ -31,7 +34,7 @@ let {
 				<Icon {icon} />
 			</span>
 		{/if}
-		<h1 class="page-header__title">{title}</h1>
+		<svelte:element this={`h${level}`} class="page-header__title">{title}</svelte:element>
 	</div>
 	{#if subtitle}
 		<p class="page-header__subtitle">{subtitle}</p>

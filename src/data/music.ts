@@ -14,12 +14,12 @@ import type { TrackDescriptor } from "@/types/musicConfig";
  */
 export const musicTracks: readonly TrackDescriptor[] = [
 	{
-		id: "dazbee",
-		title: "口笛で愛は歌えない",
-		artist: "Dazbee",
-		cover: "assets/images/music/dazbee.webp",
-		source: "/assets/music/url/dazbee.mp3",
-		duration: 241,
+		id: "happydayz",
+		title: "HappyDayz",
+		artist: "ItzASecretBoi",
+		cover: "assets/images/music/secret.webp",
+		source: "/assets/music/url/HappyDayz__61dcaf5b.ogg",
+		duration: 99,
 	},
 	{
 		id: "hitori",

@@ -27,10 +27,13 @@ let {
 	shelves = [] as CompassShelf[],
 	title = i18n(I18nKey.compass),
 	subtitle = i18n(I18nKey.compassBanner),
+	headingLevel = 1,
 }: {
 	shelves?: CompassShelf[];
 	title?: string;
 	subtitle?: string;
+	/** 合并进其它页面时传 2，避免同页出现多个 h1 */
+	headingLevel?: 1 | 2;
 } = $props();
 
 let query = $state("");
@@ -123,6 +126,7 @@ onMount(() => {
 		icon="material-symbols:explore-rounded"
 		{title}
 		{subtitle}
+		level={headingLevel}
 	/>
 
 	{#if shelves.length > 0}

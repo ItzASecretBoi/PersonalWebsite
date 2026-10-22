@@ -14,7 +14,7 @@ import { withUserConfig } from "../utils/config-overlay.ts";
 export const skillsConfig: SkillsConfig = withUserConfig("skills", {
 	enable: true,
 	title: "$t:skills",
-	description: "$t:skillsBanner",
+	description: "Here's some of the languages/tools I have under my  tool belt! (If your more interested in hardware/sites I use, check out the duffel bag tab!)",
 	categories: [
 		{
 			key: "frontend",
