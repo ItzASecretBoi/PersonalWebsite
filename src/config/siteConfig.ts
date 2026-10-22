@@ -72,6 +72,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
 			enable: true,
 			title: "ItzASecretBoi",
+			ogImage: "/og.png",
 			subtitle: [
 				"game developer.",
 				"programmer.",
@@ -80,7 +81,6 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 				"youtuber.",
 				"jack of all trades.",
 			],
-			ogImage: "/og.png"
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。
 				enable: true,
