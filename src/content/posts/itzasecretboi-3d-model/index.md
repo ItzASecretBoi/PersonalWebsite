@@ -6,7 +6,7 @@ tags: [Twitch, 3D Model, Art]
 category: Twitch
 lang: en
 encrypted: true
-password: "KeepItASecret"
+password: "Speeds"
 passwordHint: ""
 hideHomeContent: true
 ---
