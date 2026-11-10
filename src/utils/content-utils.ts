@@ -7,6 +7,7 @@ import {
 } from "@utils/content-date";
 import { siteMarkdownProcessor } from "@utils/markdown-processor";
 import { initPostIdMap } from "@utils/permalink-utils";
+import { redactPostPassword } from "@utils/post-encryption";
 import {
 	findUnknownSeriesSlugs,
 	normaliseSeriesSlug,
@@ -99,10 +100,12 @@ export type PostForList = {
 export async function getSortedPostsList(): Promise<PostForList[]> {
 	const sortedFullPosts = await getRawSortedPosts();
 
-	// delete post.body, attach pre-calculated URL
+	// delete post.body, attach pre-calculated URL, and redact passwords:
+	// this list is passed to hydrated islands (e.g. the archive panel), so
+	// anything in it ends up in the static HTML.
 	const sortedPostsList: PostForList[] = sortedFullPosts.map((post) => ({
 		slug: post.id,
-		data: post.data,
+		data: redactPostPassword(post.data),
 		url: getPostUrl(post),
 	}));
 

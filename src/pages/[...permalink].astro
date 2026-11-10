@@ -39,6 +39,7 @@ import {
 	hasCustomPermalink,
 	initPostIdMap,
 } from "@utils/permalink-utils";
+import { redactPostPassword } from "@utils/post-encryption";
 import {
 	buildSeriesContexts,
 	type SeriesPostContext,
@@ -68,7 +69,7 @@ export async function getStaticPaths() {
 
 	const discoveryCandidates = blogEntries.map((entry) => ({
 		slug: entry.id,
-		data: entry.data,
+		data: redactPostPassword(entry.data),
 	}));
 	const discoveryOptions = resolveArticleDiscoveryOptions(articleConfig);
 
