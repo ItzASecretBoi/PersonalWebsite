@@ -73,6 +73,7 @@ When seeing all angles initially.
 
 It gives him all his aura!
 
+These should ideally be easily toggle-able.
 - Toothpick
 - Duffel bag
 - Bandage (Shown in newer arts)
